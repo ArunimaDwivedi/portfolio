@@ -444,3 +444,40 @@ canvas.cf {
     scroll-behavior: auto;
   }
 }
+/* ===== INTERNSHIP TAG ===== */
+
+.internship-badge { display: inline-flex; align-items: center; gap: 12px;
+
+margin-top: 25px; margin-bottom: 5px; padding: 11px 20px;
+
+background: var(--card); color: var(--lime);
+
+border: 2px solid var(--lime); border-radius: 99px;
+
+font: 700 0.9rem var(--b); letter-spacing: 0.3px;
+
+backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+
+transition: all 0.3s ease; }
+
+/* Animated Status Dot */
+
+.internship-dot { width: 9px; height: 9px; min-width: 9px;
+
+border-radius: 50%; background: var(--lime);
+
+animation: internship-glow 1.5s infinite; }
+
+/* Glow Animation */
+
+@keyframes internship-glow { 0% { box-shadow: 0 0 0 0 var(--lime); }
+
+70% { box-shadow: 0 0 0 8px transparent; }
+
+100% { box-shadow: 0 0 0 0 transparent; } }
+
+/* Hover Effect */
+
+.internship-badge:hover { background: var(--lime); color: var(--bg); transform: translateY(-4px); box-shadow: 5px 5px 0 var(--pink); }
+
+.internship-badge:hover .internship-dot { background: var(--bg); }
